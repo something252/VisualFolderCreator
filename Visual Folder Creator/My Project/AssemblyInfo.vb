@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Visual Folder Creator")> 
-<Assembly: AssemblyDescription("Create screens that help organize desktop or folder items visually on a screen which can then be saved to a file and opened again later.")> 
-<Assembly: AssemblyCompany("David Plesnarski")> 
+<Assembly: AssemblyDescription("Create screens that help organize desktop or folder items visually on a screen which can then be saved to a file and opened again later.")>
+<Assembly: AssemblyCompany("David Plesnarski")>
 <Assembly: AssemblyProduct("Visual Folder Creator")> 
 <Assembly: AssemblyCopyright("Copyright ©  2015")> 
 <Assembly: AssemblyTrademark("")> 

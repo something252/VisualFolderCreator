@@ -39,6 +39,8 @@ Partial Class Options
         Me.EmbedIconsCheckBox = New System.Windows.Forms.CheckBox()
         Me.RealDeleteCheckBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.SaveBackupClearButton = New System.Windows.Forms.Button()
+        Me.SaveBackupOpenButton = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -60,18 +62,24 @@ Partial Class Options
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ScreenHeightNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.ScreenWidthNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ScrollableCheckBox = New System.Windows.Forms.CheckBox()
         Me.OpenImageFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.OpenAudioFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.SaveBackupOpenButton = New System.Windows.Forms.Button()
-        Me.SaveBackupClearButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.ScreenHeightNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ScreenWidthNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -117,95 +125,6 @@ Partial Class Options
         Me.AboutButton.Text = "About"
         Me.AboutButton.UseVisualStyleBackColor = True
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.ScreenHeightNumericUpDown)
-        Me.GroupBox3.Controls.Add(Me.ScreenWidthNumericUpDown)
-        Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Controls.Add(Me.ScrollableCheckBox)
-        Me.GroupBox3.Enabled = False
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 222)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(190, 111)
-        Me.GroupBox3.TabIndex = 24
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Screen Size"
-        Me.GroupBox3.Visible = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(99, 76)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(13, 15)
-        Me.Label12.TabIndex = 32
-        Me.Label12.Text = "x"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(34, 76)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(13, 15)
-        Me.Label11.TabIndex = 31
-        Me.Label11.Text = "x"
-        '
-        'ScreenHeightNumericUpDown
-        '
-        Me.ScreenHeightNumericUpDown.Location = New System.Drawing.Point(115, 72)
-        Me.ScreenHeightNumericUpDown.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.ScreenHeightNumericUpDown.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.ScreenHeightNumericUpDown.Name = "ScreenHeightNumericUpDown"
-        Me.ScreenHeightNumericUpDown.Size = New System.Drawing.Size(38, 21)
-        Me.ScreenHeightNumericUpDown.TabIndex = 30
-        Me.ScreenHeightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ScreenHeightNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'ScreenWidthNumericUpDown
-        '
-        Me.ScreenWidthNumericUpDown.Location = New System.Drawing.Point(49, 72)
-        Me.ScreenWidthNumericUpDown.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.ScreenWidthNumericUpDown.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.ScreenWidthNumericUpDown.Name = "ScreenWidthNumericUpDown"
-        Me.ScreenWidthNumericUpDown.Size = New System.Drawing.Size(38, 21)
-        Me.ScreenWidthNumericUpDown.TabIndex = 29
-        Me.ScreenWidthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ScreenWidthNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(113, 54)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(43, 15)
-        Me.Label9.TabIndex = 26
-        Me.Label9.Text = "Height"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(49, 54)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(38, 15)
-        Me.Label8.TabIndex = 25
-        Me.Label8.Text = "Width"
-        '
-        'ScrollableCheckBox
-        '
-        Me.ScrollableCheckBox.AutoSize = True
-        Me.ScrollableCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ScrollableCheckBox.Location = New System.Drawing.Point(19, 29)
-        Me.ScrollableCheckBox.Name = "ScrollableCheckBox"
-        Me.ScrollableCheckBox.Size = New System.Drawing.Size(81, 19)
-        Me.ScrollableCheckBox.TabIndex = 6
-        Me.ScrollableCheckBox.Text = "Scrollable"
-        Me.ToolTip1.SetToolTip(Me.ScrollableCheckBox, "Determines whether the screen will display scroll bars if it contains more items " & _
-        "than can fit in the visible area")
-        Me.ScrollableCheckBox.UseVisualStyleBackColor = True
-        '
         'ClearBackgroundImageButton2
         '
         Me.ClearBackgroundImageButton2.Location = New System.Drawing.Point(711, 87)
@@ -228,7 +147,7 @@ Partial Class Options
         '
         Me.EmbedIconsCheckBox.AutoSize = True
         Me.EmbedIconsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.EmbedIconsCheckBox.Location = New System.Drawing.Point(516, 129)
+        Me.EmbedIconsCheckBox.Location = New System.Drawing.Point(513, 129)
         Me.EmbedIconsCheckBox.Name = "EmbedIconsCheckBox"
         Me.EmbedIconsCheckBox.Size = New System.Drawing.Size(98, 19)
         Me.EmbedIconsCheckBox.TabIndex = 21
@@ -266,6 +185,25 @@ Partial Class Options
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Save Backups"
         '
+        'SaveBackupClearButton
+        '
+        Me.SaveBackupClearButton.Location = New System.Drawing.Point(451, 12)
+        Me.SaveBackupClearButton.Name = "SaveBackupClearButton"
+        Me.SaveBackupClearButton.Size = New System.Drawing.Size(28, 24)
+        Me.SaveBackupClearButton.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.SaveBackupClearButton, "Clear the text")
+        Me.SaveBackupClearButton.UseVisualStyleBackColor = True
+        '
+        'SaveBackupOpenButton
+        '
+        Me.SaveBackupOpenButton.Location = New System.Drawing.Point(401, 12)
+        Me.SaveBackupOpenButton.Name = "SaveBackupOpenButton"
+        Me.SaveBackupOpenButton.Size = New System.Drawing.Size(47, 24)
+        Me.SaveBackupOpenButton.TabIndex = 7
+        Me.SaveBackupOpenButton.Text = "Open"
+        Me.ToolTip1.SetToolTip(Me.SaveBackupOpenButton, "Open the selected save backup directory")
+        Me.SaveBackupOpenButton.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -297,9 +235,9 @@ Partial Class Options
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(106, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(231, 15)
+        Me.Label7.Size = New System.Drawing.Size(170, 15)
         Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Save backups per screen in this directory:"
+        Me.Label7.Text = "Save backups in this directory:"
         '
         'BrowseBackupFolderButton
         '
@@ -344,11 +282,11 @@ Partial Class Options
         Me.AutoSaveCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.AutoSaveCheckBox.Checked = True
         Me.AutoSaveCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.AutoSaveCheckBox.Location = New System.Drawing.Point(625, 129)
+        Me.AutoSaveCheckBox.Location = New System.Drawing.Point(622, 129)
         Me.AutoSaveCheckBox.Name = "AutoSaveCheckBox"
-        Me.AutoSaveCheckBox.Size = New System.Drawing.Size(114, 19)
+        Me.AutoSaveCheckBox.Size = New System.Drawing.Size(117, 19)
         Me.AutoSaveCheckBox.TabIndex = 14
-        Me.AutoSaveCheckBox.Text = "Autosave on exit"
+        Me.AutoSaveCheckBox.Text = "Autosave On Exit"
         Me.ToolTip1.SetToolTip(Me.AutoSaveCheckBox, "Determines whether the screen will autosave when the program closes")
         Me.AutoSaveCheckBox.UseVisualStyleBackColor = True
         '
@@ -466,6 +404,95 @@ Partial Class Options
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Change background image"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label12)
+        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Controls.Add(Me.ScreenHeightNumericUpDown)
+        Me.GroupBox3.Controls.Add(Me.ScreenWidthNumericUpDown)
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.ScrollableCheckBox)
+        Me.GroupBox3.Enabled = False
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 222)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(190, 111)
+        Me.GroupBox3.TabIndex = 24
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Screen Size"
+        Me.GroupBox3.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(99, 76)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(13, 15)
+        Me.Label12.TabIndex = 32
+        Me.Label12.Text = "x"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(34, 76)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(13, 15)
+        Me.Label11.TabIndex = 31
+        Me.Label11.Text = "x"
+        '
+        'ScreenHeightNumericUpDown
+        '
+        Me.ScreenHeightNumericUpDown.Location = New System.Drawing.Point(115, 72)
+        Me.ScreenHeightNumericUpDown.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.ScreenHeightNumericUpDown.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.ScreenHeightNumericUpDown.Name = "ScreenHeightNumericUpDown"
+        Me.ScreenHeightNumericUpDown.Size = New System.Drawing.Size(38, 21)
+        Me.ScreenHeightNumericUpDown.TabIndex = 30
+        Me.ScreenHeightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ScreenHeightNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'ScreenWidthNumericUpDown
+        '
+        Me.ScreenWidthNumericUpDown.Location = New System.Drawing.Point(49, 72)
+        Me.ScreenWidthNumericUpDown.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.ScreenWidthNumericUpDown.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.ScreenWidthNumericUpDown.Name = "ScreenWidthNumericUpDown"
+        Me.ScreenWidthNumericUpDown.Size = New System.Drawing.Size(38, 21)
+        Me.ScreenWidthNumericUpDown.TabIndex = 29
+        Me.ScreenWidthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ScreenWidthNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(113, 54)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(43, 15)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "Height"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(49, 54)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(38, 15)
+        Me.Label8.TabIndex = 25
+        Me.Label8.Text = "Width"
+        '
+        'ScrollableCheckBox
+        '
+        Me.ScrollableCheckBox.AutoSize = True
+        Me.ScrollableCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ScrollableCheckBox.Location = New System.Drawing.Point(19, 29)
+        Me.ScrollableCheckBox.Name = "ScrollableCheckBox"
+        Me.ScrollableCheckBox.Size = New System.Drawing.Size(81, 19)
+        Me.ScrollableCheckBox.TabIndex = 6
+        Me.ScrollableCheckBox.Text = "Scrollable"
+        Me.ToolTip1.SetToolTip(Me.ScrollableCheckBox, "Determines whether the screen will display scroll bars if it contains more items " & _
+        "than can fit in the visible area")
+        Me.ScrollableCheckBox.UseVisualStyleBackColor = True
+        '
         'OpenImageFileDialog
         '
         Me.OpenImageFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.bmp, *.gif, *.tif, *.tiff, *.jpe, *.jp2, *.j" & _
@@ -475,25 +502,6 @@ Partial Class Options
         'OpenAudioFileDialog
         '
         Me.OpenAudioFileDialog.Filter = "Audio Files (*.mp3, *.wav)|*.mp3;*.wav"
-        '
-        'SaveBackupOpenButton
-        '
-        Me.SaveBackupOpenButton.Location = New System.Drawing.Point(401, 12)
-        Me.SaveBackupOpenButton.Name = "SaveBackupOpenButton"
-        Me.SaveBackupOpenButton.Size = New System.Drawing.Size(47, 24)
-        Me.SaveBackupOpenButton.TabIndex = 7
-        Me.SaveBackupOpenButton.Text = "Open"
-        Me.ToolTip1.SetToolTip(Me.SaveBackupOpenButton, "Open the selected save backup directory")
-        Me.SaveBackupOpenButton.UseVisualStyleBackColor = True
-        '
-        'SaveBackupClearButton
-        '
-        Me.SaveBackupClearButton.Location = New System.Drawing.Point(451, 12)
-        Me.SaveBackupClearButton.Name = "SaveBackupClearButton"
-        Me.SaveBackupClearButton.Size = New System.Drawing.Size(28, 24)
-        Me.SaveBackupClearButton.TabIndex = 8
-        Me.ToolTip1.SetToolTip(Me.SaveBackupClearButton, "Clear the text")
-        Me.SaveBackupClearButton.UseVisualStyleBackColor = True
         '
         'Options
         '
@@ -508,13 +516,13 @@ Partial Class Options
         Me.Text = "Screen Options"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.ScreenHeightNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ScreenWidthNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

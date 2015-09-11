@@ -1052,7 +1052,7 @@ Public Class NewScreen
                 Me.Location = New Point(CInt(strTemp2(0)), CInt(strTemp2(1)))
                 Dim allScreens() As Windows.Forms.Screen = Screen.AllScreens
                 Dim totalX As Integer = 0, currentY As Integer = 0, countTmp As Integer = 0
-                For Each screen1 In allScreens ' test if screen location is out of bounds (usually only possible if was saved on a now not active monitor or save editted badly)
+                For Each screen1 In allScreens ' test if screen location is out of bounds (usually only possible if was saved on a now not active monitor or save edited badly)
 
                     totalX += screen1.Bounds.Width
                     currentY = screen1.Bounds.Height
@@ -1065,7 +1065,7 @@ Public Class NewScreen
                         End If
                     End If
 
-                    If Not Me.Location.X > totalX AndAlso Me.Location.Y < currentY - 30 Then ' taskbar is not accounted for very well so program could be hidden by it if save is editted
+                    If Not Me.Location.X > totalX AndAlso Me.Location.Y < currentY - 30 Then ' taskbar is not accounted for very well so program could be hidden by it if save is edited
                         Exit For ' doesn't need location resetting
                     End If
 

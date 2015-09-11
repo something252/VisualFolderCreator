@@ -120,9 +120,6 @@
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>193, 17</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>193, 17</value>
-  </metadata>
   <data name="EmbedIconsCheckBox.ToolTip" xml:space="preserve">
     <value>Determines whether item icons are embedded into the save file or are simply loaded directly from the real system files they point to on startup. 
 Turning this off will dramatically reduce save file size.</value>
