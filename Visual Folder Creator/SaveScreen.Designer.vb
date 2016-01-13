@@ -36,27 +36,33 @@ Partial Class SaveScreen
         '
         'SaveScreenButton
         '
-        Me.SaveScreenButton.Location = New System.Drawing.Point(69, 87)
+        Me.SaveScreenButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SaveScreenButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveScreenButton.Location = New System.Drawing.Point(0, 0)
         Me.SaveScreenButton.Name = "SaveScreenButton"
-        Me.SaveScreenButton.Size = New System.Drawing.Size(126, 30)
+        Me.SaveScreenButton.Size = New System.Drawing.Size(260, 65)
         Me.SaveScreenButton.TabIndex = 1
         Me.SaveScreenButton.Text = "Save As"
         Me.SaveScreenButton.UseVisualStyleBackColor = True
         '
         'QuitButton
         '
-        Me.QuitButton.Location = New System.Drawing.Point(69, 148)
+        Me.QuitButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.QuitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuitButton.Location = New System.Drawing.Point(0, 65)
         Me.QuitButton.Name = "QuitButton"
-        Me.QuitButton.Size = New System.Drawing.Size(126, 30)
+        Me.QuitButton.Size = New System.Drawing.Size(260, 65)
         Me.QuitButton.TabIndex = 4
         Me.QuitButton.Text = "Exit Without Saving"
         Me.QuitButton.UseVisualStyleBackColor = True
         '
         'SaveScreen2Button
         '
-        Me.SaveScreen2Button.Location = New System.Drawing.Point(69, 26)
+        Me.SaveScreen2Button.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SaveScreen2Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveScreen2Button.Location = New System.Drawing.Point(0, 130)
         Me.SaveScreen2Button.Name = "SaveScreen2Button"
-        Me.SaveScreen2Button.Size = New System.Drawing.Size(126, 30)
+        Me.SaveScreen2Button.Size = New System.Drawing.Size(260, 65)
         Me.SaveScreen2Button.TabIndex = 5
         Me.SaveScreen2Button.Text = "Save"
         Me.SaveScreen2Button.UseVisualStyleBackColor = True
@@ -75,7 +81,7 @@ Partial Class SaveScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(260, 200)
+        Me.ClientSize = New System.Drawing.Size(260, 195)
         Me.Controls.Add(Me.SaveScreen2Button)
         Me.Controls.Add(Me.QuitButton)
         Me.Controls.Add(Me.SaveScreenButton)
@@ -84,7 +90,7 @@ Partial Class SaveScreen
         Me.MinimizeBox = False
         Me.Name = "SaveScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Save Screen"
+        Me.Text = "Save"
         Me.ResumeLayout(False)
 
     End Sub
