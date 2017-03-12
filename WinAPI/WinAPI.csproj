@@ -29,6 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>YrRkpCF9WLPRgrI6DnfQN8xKzS0hwDbZW1OqFZVz.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +53,9 @@
     <Compile Include="Shell32.cs" />
     <Compile Include="Shell32Vista.cs" />
     <Compile Include="User32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="YrRkpCF9WLPRgrI6DnfQN8xKzS0hwDbZW1OqFZVz.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

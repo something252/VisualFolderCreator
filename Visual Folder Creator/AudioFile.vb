@@ -33,16 +33,16 @@ Public Class AudioFile
 
         Select Case Right(Filename, 3).ToLower
             Case "mp3"
-                mciSendString("open """ & _filename & """ type mpegvideo alias audiofile", Nothing, 0, IntPtr.Zero)
+                mciSendString("open """ & _filename & """ type mpegvideo alias audiofile", Nothing, 0, CInt(IntPtr.Zero))
 
                 Dim playCommand As String = "play audiofile from 0"
 
                 If _wait = True Then playCommand += " wait"
 
-                mciSendString(playCommand, Nothing, 0, IntPtr.Zero)
+                mciSendString(playCommand, Nothing, 0, CInt(IntPtr.Zero))
             Case "wav"
-                mciSendString("open """ & _filename & """ type waveaudio alias audiofile", Nothing, 0, IntPtr.Zero)
-                mciSendString("play audiofile from 0", Nothing, 0, IntPtr.Zero)
+                mciSendString("open """ & _filename & """ type waveaudio alias audiofile", Nothing, 0, CInt(IntPtr.Zero))
+                mciSendString("play audiofile from 0", Nothing, 0, CInt(IntPtr.Zero))
             Case "mid", "idi"
                 mciSendString("stop midi", "", 0, 0)
                 mciSendString("close midi", "", 0, 0)
@@ -62,7 +62,7 @@ Public Class AudioFile
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Pause()
-        mciSendString("pause audiofile", Nothing, 0, IntPtr.Zero)
+        mciSendString("pause audiofile", Nothing, 0, CInt(IntPtr.Zero))
         IsPaused = True
     End Sub
 
@@ -71,7 +71,7 @@ Public Class AudioFile
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub [Resume]()
-        mciSendString("resume audiofile", Nothing, 0, IntPtr.Zero)
+        mciSendString("resume audiofile", Nothing, 0, CInt(IntPtr.Zero))
         IsPaused = False
     End Sub
 
@@ -79,16 +79,16 @@ Public Class AudioFile
     ''' Stop the current file if it's playing.
     ''' </summary>
     ''' <remarks></remarks>
-    Public Sub [Stop]()
-        mciSendString("stop audiofile", Nothing, 0, IntPtr.Zero)
+    Public Shared Sub [Stop]()
+        mciSendString("stop audiofile", Nothing, 0, CInt(IntPtr.Zero))
     End Sub
 
     ''' <summary>
     ''' Close the file.
     ''' </summary>
     ''' <remarks></remarks>
-    Public Sub Close()
-        mciSendString("close audiofile", Nothing, 0, IntPtr.Zero)
+    Public Shared Sub Close()
+        mciSendString("close audiofile", Nothing, 0, CInt(IntPtr.Zero))
     End Sub
 
     Private _wait As Boolean = False
@@ -115,11 +115,11 @@ Public Class AudioFile
     ''' <value></value>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    ReadOnly Property Milleseconds() As Integer
+    Shared ReadOnly Property Milleseconds() As Integer
         Get
             Dim buf As String = Space(255)
-            mciSendString("set audiofile time format milliseconds", Nothing, 0, IntPtr.Zero)
-            mciSendString("status audiofile length", buf, 255, IntPtr.Zero)
+            mciSendString("set audiofile time format milliseconds", Nothing, 0, CInt(IntPtr.Zero))
+            mciSendString("status audiofile length", buf, 255, CInt(IntPtr.Zero))
 
             buf = Replace(buf, Chr(0), "") ' Get rid of the nulls, they muck things up
 
@@ -137,10 +137,10 @@ Public Class AudioFile
     ''' <value></value>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    ReadOnly Property Status() As String
+    Shared ReadOnly Property Status() As String
         Get
             Dim buf As String = Space(255)
-            mciSendString("status audiofile mode", buf, 255, IntPtr.Zero)
+            mciSendString("status audiofile mode", buf, 255, CInt(IntPtr.Zero))
             buf = Replace(buf, Chr(0), "")  ' Get rid of the nulls, they muck things up
             Return buf
         End Get
@@ -155,7 +155,7 @@ Public Class AudioFile
     ReadOnly Property FileSize() As Integer
         Get
             Try
-                Return My.Computer.FileSystem.GetFileInfo(_filename).Length
+                Return CInt(My.Computer.FileSystem.GetFileInfo(_filename).Length)
             Catch ex As Exception
                 Return 0
             End Try
@@ -168,10 +168,10 @@ Public Class AudioFile
     ''' <value></value>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    ReadOnly Property Channels() As Integer
+    Shared ReadOnly Property Channels() As Integer
         Get
             Dim buf As String = Space(255)
-            mciSendString("status audiofile channels", buf, 255, IntPtr.Zero)
+            mciSendString("status audiofile channels", buf, 255, CInt(IntPtr.Zero))
 
             If IsNumeric(buf) = True Then
                 Return CInt(buf)
@@ -187,10 +187,10 @@ Public Class AudioFile
     ''' <value></value>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    ReadOnly Property Debug() As String
+    Shared ReadOnly Property Debug() As String
         Get
             Dim buf As String = Space(255)
-            mciSendString("status audiofile channels", buf, 255, IntPtr.Zero)
+            mciSendString("status audiofile channels", buf, 255, CInt(IntPtr.Zero))
 
             Return Str(buf)
         End Get

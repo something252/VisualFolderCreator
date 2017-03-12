@@ -303,7 +303,7 @@ namespace IconHelper
                     if (iconIndex < 0)
                         iconIndex = 0;  //To avoid the invalid index.
                 }
-                catch (Exception ex)
+                catch //(Exception ex)
                 {
                     //MessageBox.Show("Source: " + ex.Source + Environment.NewLine + ex.Message);
                 }
